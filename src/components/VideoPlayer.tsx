@@ -6,9 +6,18 @@ interface VideoPlayerProps {
   className?: string;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, type, className = "" }) => {
+const ProjectModal: React.FC<VideoPlayerProps> = ({ url, type, className = "" }) => {
   if (type === 'youtube') {
-    const videoId = url.split('v=')[1];
+    // Handle both regular YouTube videos and Shorts
+    const getYouTubeId = (url: string) => {
+      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|shorts\/)([^#\&\?]*).*/;
+      const match = url.match(regExp);
+      return match && match[2].length === 11 ? match[2] : null;
+    };
+
+    const videoId = getYouTubeId(url);
+    if (!videoId) return null;
+
     return (
       <div className={`relative w-full ${className}`} style={{ paddingBottom: '56.25%' }}>
         <iframe
@@ -34,4 +43,4 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, type, className = "" }) 
   );
 };
 
-export default VideoPlayer;
+export default ProjectModal;

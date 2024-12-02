@@ -13,3 +13,14 @@ export interface Project {
   }[];
   aspectRatio?: number; // width/height
 }
+
+export interface CodeProject {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  features?: string[];
+}
