@@ -5,12 +5,12 @@ export const projects: Project[] = [
     id: '1',
     title: 'Whitewater Waterfall',
     category: 'Fluid Simulation',
-    image: `${import.meta.env.BASE_URL}/src/assets/images/project-1/Camera_001.jpg`,
+    image: '/src/assets/images/project-1/Camera_001.jpg',
     description: 'A fluid simulation of a waterfall focused on the whitewater effect.',
     software: ['Blender', 'FLIP Fluids'],
     images: [
       '/src/assets/images/project-1/Camera_001.jpg',
-      '/public/assets/images/project-1/still_385.jpg',
+      '/src/assets/images/project-1/still_385.jpg',
     ],
     videos: [
       {
