@@ -10,7 +10,7 @@ export const projects: Project[] = [
     software: ['Blender', 'FLIP Fluids'],
     images: [
       '/src/assets/images/project-1/Camera_001.jpg',
-      '/src/assets/images/project-1/still_385.jpg',
+      '/assets/images/project-1/still_385.jpg',
     ],
     videos: [
       {
