@@ -19,7 +19,7 @@ const Home = () => {
     <div className="min-h-screen bg-gray-50 pt-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 mt-4">
-        <h1 className="text-xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
+        <h1 className="text-xl font-bold text-gray-900 sm:text-5xl md:text-6xl font-marmalade">
             <span className="block">ESPERSONNEL</span>
             <span className="block text-purple-600 items-center">3D ARTIST</span>
           </h1>
@@ -31,7 +31,7 @@ const Home = () => {
 
 
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">3D Projects</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 font-marmalade">3D Projects</h2>
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {projects.map((project, index) => (
               <div key={project.id} className="break-inside-avoid">
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Code Projects</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 font-marmalade">Code Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {codeProjects.map((project, index) => (
               <CodeProjectCard

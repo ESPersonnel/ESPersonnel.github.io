@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: { 
-        sans: ['Bahnhof Black', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
+        marmalade: ['TheMarmalade-Bold', 'sans-serif'],
       },
     },
   },
