@@ -226,9 +226,13 @@ export const projects: Project[] = [
     ],
     videos: [
       {
-        url: `${import.meta.env.BASE_URL}assets/images/project-11/10001-0060.mp4`,
+        url: `${import.meta.env.BASE_URL}assets/images/project-11/michael_head.mkv`,
         type: 'local'
       },
+      {
+        url: `${import.meta.env.BASE_URL}assets/images/project-11/10001-0100.mp4`,
+        type: 'local'
+      }
     ],
     aspectRatio: 9/16,
   },

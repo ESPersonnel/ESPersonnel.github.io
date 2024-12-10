@@ -71,34 +71,39 @@ const ProjectDetail = () => {
               </div>
             )}
 
-            {project.images && (
-              <div className="space-y-6">
-                {project.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                  />
-                ))}
+            {project.images && project.images.length > 1 && (
+              <div className="mb-8">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">Progress Images</h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {project.images.map((img, index) => (
+                    <div key={index} className="aspect-video rounded-lg overflow-hidden shadow-md">
+                      <img 
+                        src={img} 
+                        alt={`${project.title} progress ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
             {hasVideos && (
               <div className="space-y-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Project Videos</h2>
-                {project.videos.map((video, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden shadow-lg">
-                    <VideoPlayer
-                      url={video.url}
-                      type={video.type}
-                      className="w-full"
-                    />
-                  </div>
-                ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {project.videos.map((video, index) => (
+                    <div key={index} className="rounded-lg overflow-hidden shadow-lg">
+                      <VideoPlayer
+                        url={video.url}
+                        type={video.type}
+                        className="w-full aspect-video"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            )}
-          </motion.div>
+            )}          </motion.div>
         </div>
       </div>
     </div>
